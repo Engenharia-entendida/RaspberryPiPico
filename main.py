@@ -4,7 +4,7 @@ from time import sleep
 import dht
 WIDTH  = 128                                            
 HEIGHT = 64                                            
-sensor = dht.DHT22(Pin(19))
+sensor = dht.DHT22(Pin(19))  #Associe o objeto de acordo com o sensor, para a simulação, temos o DHT22. O DTH11 funciona normalmente, basta alterar essa linha para: sensor = dht.DHT11(Pin(19)). 
 fan = Pin(16,Pin.OUT)
 i2c = I2C(0, scl=Pin(5), sda=Pin(4), freq=200000)       
 oled = SSD1306_I2C(WIDTH, HEIGHT, i2c)                  
